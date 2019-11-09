@@ -30,3 +30,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 # include /www/server/panel/vhost/nginx/*.conf;
 root  /www/server/phpmyadmin;
 5098
+/home/www/test.git
