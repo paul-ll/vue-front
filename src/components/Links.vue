@@ -18,10 +18,9 @@
     data() {
       return {
         linkList: [
-          {name: 'Github', href: 'https://github.com/liangfengbo'},
-          {name: '慕课网', href: 'https://www.imooc.com/u/3957223'},
-          {name: '掘金', href: 'https://juejin.im/user/58c2981d8ac2470720f75bb9'},
-          {name: 'Coding.net', href: 'https://dev.tencent.com/u/liangfengbo'}
+          {name: 'Github', href: 'https://github.com/paul-ll'},
+          {name: 'CSDN', href: 'https://blog.csdn.net/qq_31405997'},
+          {name: '掘金', href: 'https://juejin.im/user/592f8378a0bb9f0058a13385'}
         ]
       }
     },
