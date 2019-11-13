@@ -15,7 +15,7 @@
               <el-dropdown-item
                 v-for="(item, index) in nav"
                 :key="index"
-                @click.native="changeNav(item.path, index)">
+                @click.native="changeNav(item.name, index)">
                 <i :class="`icon ${item.icon}`"></i> {{item.name}}
               </el-dropdown-item>
             </el-dropdown-menu>
@@ -27,7 +27,7 @@
         <ul class="nav-box">
           <li v-for="(item, index) in nav"
               :class="navIndex === index ? 'nav-item nav-item--active' : 'nav-item'"
-              @click="changeNav(item.path, index)"
+              @click="changeNav(item.name, index)"
               :key="index">
             <i :class="`icon ${item.icon}`"></i> {{item.name}}
           </li>
@@ -86,9 +86,9 @@
       /**
        * 切换导航栏
        */
-      changeNav(path, index) {
+      changeNav(name, index) {
         this.$router.replace({
-          path:path,
+          name:name,
           query: merge({})
         });
         this.navIndex = index;
