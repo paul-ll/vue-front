@@ -68,6 +68,7 @@
     mounted() {
       let index=sessionStorage.getItem("navIndex");
       console.log(index)
+      console.log(this.$route.path)
       if(this.$route.path !== '/' && index){
         this.navIndex = Number(index);
       }
