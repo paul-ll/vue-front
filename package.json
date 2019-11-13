@@ -22,7 +22,8 @@
     "vue-lazyload": "^1.2.6",
     "vue-ls": "^3.2.1",
     "vue-router": "^3.0.6",
-    "vuex": "^3.1.1"
+    "vuex": "^3.1.1",
+    "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -59,7 +60,7 @@
     "vue-template-compiler": "^2.6.10",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-dev-server": "^3.1.11",
+    "webpack-dev-server": "^2.11.5",
     "webpack-merge": "^4.2.1"
   },
   "engines": {
