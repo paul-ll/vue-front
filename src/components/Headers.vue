@@ -82,10 +82,11 @@
        */
       changeNav(path, index) {
         this.$router.replace({
+          path:path,
           query: merge({})
         });
         this.navIndex = index;
-        this.toPath(path);
+        // this.toPath(path);
         this.getArticle();
       },
       /**
