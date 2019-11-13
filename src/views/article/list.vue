@@ -52,13 +52,13 @@
     </article>
 
     <div class="sidebar">
-      <v-category/>
+      <!-- <v-category/> -->
       <v-links/>
     </div>
   </section>
 </template>
 <script>
-  import VCategory from '../../components/Category'
+  // import VCategory from '../../components/Category'
 
   import VLinks from '../../components/Links'
   import {mapState, mapActions} from 'vuex'
@@ -66,7 +66,7 @@
 
   export default {
     components: {
-      VCategory,
+      // VCategory,
       VLinks
     },
     data() {
@@ -89,12 +89,12 @@
     created() {
       // 获取文章
       this.getArticle();
-      document.title = `波博客 - boblog.com`
+      document.title = `吕磊博客`
     },
     methods: {
       ...mapActions({
         getArticleList: 'article/getArticleList',
-        searchArticle: 'article/searchArticle'
+        // searchArticle: 'article/searchArticle'
       }),
       /**
        * 获取文章
@@ -121,7 +121,7 @@
             page
           })
         });
-        this.getArticle();
+        // this.getArticle();
       },
 
       /**
