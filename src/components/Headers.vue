@@ -68,11 +68,10 @@
     mounted() {
       let index=sessionStorage.getItem("navIndex");
 
-      if(window.location.pathname !== '/' && index){
-        this.navIndex = Number(index);
-      }else{
-        this.navIndex =1
+      if(window.location.pathname !== '/' ){
+        this.navIndex = 1;
       }
+
     },
     computed: {
       ...mapState({})
