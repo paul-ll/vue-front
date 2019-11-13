@@ -70,6 +70,8 @@
 
       if(window.location.pathname !== '/' && index){
         this.navIndex = Number(index);
+      }else{
+        this.navIndex =1
       }
     },
     computed: {
