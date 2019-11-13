@@ -69,7 +69,7 @@
       let index=sessionStorage.getItem("navIndex");
       console.log(index)
       if(index){
-        this.navIndex = index;
+        this.navIndex = Number(index);
       }
     },
     computed: {
