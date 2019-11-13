@@ -6,7 +6,8 @@ const ajaxUrl = process.env.NODE_ENV === 'development'
   // 测试环境api接口
   ? 'http://localhost:3000/v1'
   // 线上环境api接口
-  : 'http://95.163.203.224:3000/v1';
+  // : 'http://api.boblog.com/v1';
+  : 'http://95.163.203.224:3000';
 
 util.ajax = axios.create({
   baseURL: ajaxUrl,
