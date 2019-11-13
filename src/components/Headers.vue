@@ -67,8 +67,7 @@
     },
     mounted() {
       let index=sessionStorage.getItem("navIndex");
-      console.log(index)
-      console.log(this.$route)
+      console.log(window.location.pathname)
       if(this.$route.name !== 'home' && index){
         this.navIndex = Number(index);
       }
