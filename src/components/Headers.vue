@@ -66,6 +66,10 @@
       }
     },
     mounted() {
+      let index=localStorage.getItem("navIndex");
+      if(index){
+        this.navIndex = index;
+      }
     },
     computed: {
       ...mapState({})
@@ -86,6 +90,7 @@
           query: merge({})
         });
         this.navIndex = index;
+        sessionStorage.setItem("navIndex",index);
         // this.toPath(path);
         this.getArticle();
       },
