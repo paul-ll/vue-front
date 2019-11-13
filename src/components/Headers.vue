@@ -66,7 +66,7 @@
       }
     },
     mounted() {
-      let index=localStorage.getItem("navIndex");
+      let index=sessionStorage.getItem("navIndex");
       console.log(index)
       if(index){
         this.navIndex = index;
