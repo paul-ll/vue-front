@@ -59,9 +59,9 @@
         keyword: '',
         navIndex: 0,
         nav: [
-          {name: '文章', path: '/', icon: 'el-icon-house'},
+          {name: '文章', name: 'home', icon: 'el-icon-house'},
           // {name: '专栏', path: '/book', icon: 'el-icon-reading\n'},
-          {name: '关于', path: '/about', icon: 'el-icon-chat-round'},
+          {name: '关于', name: 'about', icon: 'el-icon-chat-round'},
         ]
       }
     },
@@ -69,7 +69,7 @@
       let index=sessionStorage.getItem("navIndex");
       console.log(index)
       console.log(this.$route)
-      if(this.$route.path !== '/' && index){
+      if(this.$route.name !== 'home' && index){
         this.navIndex = Number(index);
       }
     },
