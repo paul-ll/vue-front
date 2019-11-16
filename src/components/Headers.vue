@@ -66,6 +66,9 @@
       }
     },
     mounted() {
+      if(window.location.pathname !== '/' ){
+         this.navIndex = 1;
+      }
     },
     computed: {
       ...mapState({})
