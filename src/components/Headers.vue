@@ -15,7 +15,7 @@
               <el-dropdown-item
                 v-for="(item, index) in nav"
                 :key="index"
-                @click.native="changeNav(item.name, index)">
+                @click.native="changeNav(item.path, index)">
                 <i :class="`icon ${item.icon}`"></i> {{item.name}}
               </el-dropdown-item>
             </el-dropdown-menu>
@@ -27,7 +27,7 @@
         <ul class="nav-box">
           <li v-for="(item, index) in nav"
               :class="navIndex === index ? 'nav-item nav-item--active' : 'nav-item'"
-              @click="changeNav(item.name, index)"
+              @click="changeNav(item.path, index)"
               :key="index">
             <i :class="`icon ${item.icon}`"></i> {{item.name}}
           </li>
@@ -59,19 +59,13 @@
         keyword: '',
         navIndex: 0,
         nav: [
-          {name: '文章', name: 'home', icon: 'el-icon-house'},
+          {name: '文章', path: '/', icon: 'el-icon-house'},
           // {name: '专栏', path: '/book', icon: 'el-icon-reading\n'},
-          {name: '关于', name: 'about', icon: 'el-icon-chat-round'},
+          {name: '关于', path: '/about', icon: 'el-icon-chat-round'},
         ]
       }
     },
     mounted() {
-      let index=sessionStorage.getItem("navIndex");
-
-      if(window.location.pathname !== '/' ){
-        this.navIndex = 1;
-      }
-
     },
     computed: {
       ...mapState({})
@@ -86,14 +80,12 @@
       /**
        * 切换导航栏
        */
-      changeNav(name, index) {
+      changeNav(path, index) {
         this.$router.replace({
-          name:name,
           query: merge({})
         });
         this.navIndex = index;
-        sessionStorage.setItem("navIndex",index);
-        // this.toPath(path);
+        this.toPath(path);
         this.getArticle();
       },
       /**
