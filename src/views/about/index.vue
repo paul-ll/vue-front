@@ -15,7 +15,7 @@
       <p>博客的风格：简约至上。    </p>
     </article>
     <article class="end">
-      <p>最后，祝大家每天开心，每天幸福！</p>
+      <p>最后，祝大家每天开心，每天幸福 ！</p>
     </article>
   </section>
 </template>
