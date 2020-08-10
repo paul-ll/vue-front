@@ -1,7 +1,7 @@
 <template>
   <div class="link">
     <h1 class="link-title">
-      <i class="icon el-icon-connection"></i> 链接
+      <i class="icon el-icon-connection"></i>  链接
     </h1>
     <ul class="link-box">
       <li class="link-item" v-for="(item, index) in linkList" :key="index">
